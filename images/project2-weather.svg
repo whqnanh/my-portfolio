@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#bg2)"/>
+  <g filter="url(#shadow2)">
+    <!-- Weather Card -->
+    <rect x="80" y="45" width="440" height="290" rx="16" fill="#ffffff" fill-opacity="0.95"/>
+    <!-- Top bar -->
+    <rect x="110" y="70" width="280" height="38" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="125" y="94" fill="#64748b" font-family="-apple-system, sans-serif" font-size="14">🔍 Ho Chi Minh City, VN</text>
+    <rect x="400" y="70" width="90" height="38" rx="8" fill="#0284c7"/>
+    <text x="445" y="94" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Tìm kiếm</text>
+
+    <!-- Main Weather Info -->
+    <g transform="translate(110, 130)">
+      <!-- Sun & Cloud -->
+      <circle cx="50" cy="50" r="30" fill="#f59e0b"/>
+      <path d="M 40 60 Q 30 50 45 40 Q 55 25 70 35 Q 85 25 95 40 Q 110 50 100 65 Q 95 75 80 75 L 45 75 Z" fill="#ffffff" opacity="0.9" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+      <!-- Temp -->
+      <text x="130" y="55" fill="#0f172a" font-family="-apple-system, sans-serif" font-size="44" font-weight="800">31°C</text>
+      <text x="130" y="80" fill="#64748b" font-family="-apple-system, sans-serif" font-size="15" font-weight="500">Nhiều mây • Độ ẩm 72% • Gió 14km/h</text>
+    </g>
+
+    <!-- 3-Day Forecast mini cards -->
+    <g transform="translate(110, 235)">
+      <rect x="0" y="0" width="115" height="75" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="57" y="22" fill="#64748b" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle">Hôm nay</text>
+      <text x="57" y="46" fill="#0284c7" font-family="-apple-system, sans-serif" font-size="18" text-anchor="middle">☀️ 31°C</text>
+      <text x="57" y="64" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">Nắng nhẹ</text>
+
+      <rect x="132" y="0" width="115" height="75" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="189" y="22" fill="#64748b" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle">Ngày mai</text>
+      <text x="189" y="46" fill="#0284c7" font-family="-apple-system, sans-serif" font-size="18" text-anchor="middle">⛅ 29°C</text>
+      <text x="189" y="64" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">Có mây</text>
+
+      <rect x="265" y="0" width="115" height="75" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="322" y="22" fill="#64748b" font-family="-apple-system, sans-serif" font-size="12" text-anchor="middle">Ngày kia</text>
+      <text x="322" y="46" fill="#0284c7" font-family="-apple-system, sans-serif" font-size="18" text-anchor="middle">🌧️ 27°C</text>
+      <text x="322" y="64" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">Mưa rào</text>
+    </g>
+  </g>
+</svg>

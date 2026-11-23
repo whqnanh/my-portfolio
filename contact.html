@@ -1,68 +1,223 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên hệ - Nguyễn Hoàng Anh</title>
+    <meta name="description" content="Liên hệ với Nguyễn Hoàng Anh - Form gửi tin nhắn Formspree, thông tin email, GitHub và các nền tảng mạng xã hội.">
+    <title>Liên hệ &amp; Formspree - Nguyễn Hoàng Anh Portfolio</title>
+    
     <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="contact.html" class="active">Liên hệ</a>
-    </nav>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/avatar.jpg" alt="Avatar Nguyễn Hoàng Anh" class="brand-avatar">
+                <span>Hoàng Anh <span class="brand-badge">DEV</span></span>
+            </a>
 
-    <header>
-        <h1>Liên hệ với mình</h1>
-        <p>Rất vui được kết nối và trao đổi cùng bạn!</p>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+                <li><a href="projects.html" class="nav-link">Dự án</a></li>
+                <li><a href="contact.html" class="nav-link active">Liên hệ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" title="Chuyển chế độ sáng / tối" aria-label="Đổi giao diện">
+                    🌙
+                </button>
+                <button type="button" class="mobile-toggle-btn" aria-label="Mở menu điều hướng" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link">🏠 Trang chủ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">👤 Giới thiệu</a></li>
+                <li><a href="projects.html" class="mobile-nav-link">💻 Dự án (6 dự án)</a></li>
+                <li><a href="contact.html" class="mobile-nav-link active">📬 Liên hệ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Thông tin liên lạc</h2>
-                <p>📍 <strong>Địa chỉ:</strong> TP. Hồ Chí Minh, Việt Nam</p>
-                <p>📧 <strong>Email:</strong> <a href="mailto:nghoanganh559@gmail.com" style="color: #4CAF50; text-decoration: none;">nghoanganh559@gmail.com</a></p>
-                <p>🐙 <strong>GitHub:</strong> <a href="https://github.com/whqnanh" target="_blank" style="color: #4CAF50; text-decoration: none;">github.com/whqnanh</a></p>
-                <p>🌐 <strong>Website Portfolio:</strong> <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" style="color: #4CAF50; text-decoration: none;">whqnanh.github.io/my-portfolio</a></p>
+    <main class="container contact-section" style="padding-top: 3rem; padding-bottom: 5rem;">
+        <!-- Page Title Header -->
+        <div class="section-header reveal">
+            <span class="section-label">Kết nối trực tuyến</span>
+            <h1 class="section-title">Liên hệ với Nguyễn Hoàng Anh</h1>
+            <p class="section-description">
+                Bạn có ý tưởng dự án mới, câu hỏi chuyên môn hay muốn trao đổi cơ hội hợp tác? Hãy gửi tin nhắn qua biểu mẫu Formspree bên dưới nhé!
+            </p>
+        </div>
+
+        <!-- Contact Layout (2 Cột Responsive) -->
+        <div class="contact-layout">
+            <!-- Cột 1: Thông tin liên lạc -->
+            <div class="contact-card reveal">
+                <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+                    Thông tin liên lạc
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                    Mình luôn sẵn lòng phản hồi các tin nhắn và email trong vòng 24 giờ làm việc.
+                </p>
+
+                <div class="contact-info-list">
+                    <!-- Item 1 -->
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📍</div>
+                        <div class="contact-text">
+                            <h4>Địa điểm sinh sống:</h4>
+                            <p>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📧</div>
+                        <div class="contact-text">
+                            <h4>Hòm thư điện tử (Email):</h4>
+                            <p><a href="mailto:nghoanganh559@gmail.com">nghoanganh559@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="contact-item">
+                        <div class="contact-icon-box">🐙</div>
+                        <div class="contact-text">
+                            <h4>Tài khoản GitHub:</h4>
+                            <p><a href="https://github.com/whqnanh" target="_blank">github.com/whqnanh</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="contact-item">
+                        <div class="contact-icon-box">🌐</div>
+                        <div class="contact-text">
+                            <h4>Website Portfolio Trực Tuyến:</h4>
+                            <p><a href="https://whqnanh.github.io/my-portfolio/" target="_blank">whqnanh.github.io/my-portfolio</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="contact-item">
+                        <div class="contact-icon-box">🛡️</div>
+                        <div class="contact-text">
+                            <h4>Mạng DNS &amp; Bảo mật:</h4>
+                            <p>Được bảo vệ bởi Cloudflare CDN &amp; SSL Strict</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.25rem; background: var(--bg-alt); border-radius: var(--radius-md);">
+                    <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+                        ⚡ Thời gian biểu hoạt động:
+                    </h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                        Thứ 2 - Thứ 7: 08:00 - 21:00 (Giờ Việt Nam GMT+7)<br>
+                        Chủ nhật: Nhận tin nhắn và phản hồi email ưu tiên.
+                    </p>
+                </div>
             </div>
 
-            <div class="contact-form">
-                <h2>Gửi tin nhắn cho mình</h2>
-                <form id="contactForm">
+            <!-- Cột 2: Formspree Contact Form (Bài tập 8 Core Requirement) -->
+            <div class="contact-card reveal reveal-delay-1">
+                <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+                    Gửi tin nhắn trực tiếp (Formspree)
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                    Biểu mẫu tích hợp dịch vụ <strong>Formspree.io</strong> miễn phí, gửi thông báo trực tiếp về email mà không cần cấu hình backend server phức tạp.
+                </p>
+
+                <!-- Formspree Endpoint -->
+                <form action="https://formspree.io/f/mbljeqva" method="POST" id="contactForm">
+                    <!-- Họ và tên -->
                     <div class="form-group">
-                        <label for="name">Họ và tên:</label>
-                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn..." required>
+                        <label for="fullName" class="form-label">Họ và tên của bạn: *</label>
+                        <input type="text" id="fullName" name="name" class="form-control" placeholder="Ví dụ: Nguyễn Văn A" required minlength="2">
                     </div>
+
+                    <!-- Email -->
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email..." required>
+                        <label for="email" class="form-label">Địa chỉ Email liên hệ: *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
                     </div>
+
+                    <!-- Tiêu đề -->
                     <div class="form-group">
-                        <label for="message">Nội dung tin nhắn:</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Nhập nội dung lời nhắn..." required></textarea>
+                        <label for="subject" class="form-label">Chủ đề tin nhắn: *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Ví dụ: Trao đổi về dự án Portfolio / Đề xuất thực tập..." required>
                     </div>
-                    <button type="submit" class="btn-submit">Gửi tin nhắn</button>
+
+                    <!-- Nội dung -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Nội dung tin nhắn chi tiết: *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Nhập nội dung bạn muốn gửi tới Hoàng Anh..." required minlength="10"></textarea>
+                    </div>
+
+                    <!-- Nút gửi -->
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.85rem;">
+                        ✉️ Gửi tin nhắn ngay (Formspree)
+                    </button>
+
+                    <!-- Vùng hiển thị trạng thái phản hồi AJAX -->
+                    <div id="formStatus" class="form-status"></div>
                 </form>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="deploy-platforms">
-            <p><strong>Triển khai công khai trên các nền tảng miễn phí (Chương 6 - Domain & Hosting):</strong></p>
-            <div class="platform-links">
-                <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" class="platform-badge gh">🐙 GitHub Pages</a>
-                <a href="http://hoanganh-cv.42web.io/my-portfolio/" target="_blank" class="platform-badge infinity">🌐 InfinityFree Hosting</a>
-                <a href="http://mywebsite-hoanganh.duckdns.org" target="_blank" class="platform-badge duck">🦆 DuckDNS Domain</a>
-                <a href="https://whqnanh.github.io/bai-tap-32/" target="_blank" class="platform-badge store">🛍️ E-Commerce Live</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 0.5rem;">
+                        <img src="images/avatar.jpg" alt="Avatar" style="width: 28px; height: 28px; border-radius: 50%;">
+                        Nguyễn Hoàng Anh Portfolio
+                    </h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+                        Học phần Lập trình Web - Khoa Công nghệ Thông tin, Đại học Văn Hiến (VHU).
+                    </p>
+                    <span class="cloudflare-verified-badge">
+                        🛡️ Cloudflare DNS &amp; SSL Full (Strict) Verified
+                    </span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Điều hướng</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu bản thân</a></li>
+                        <li><a href="projects.html">Dự án tiêu biểu (CSS Grid)</a></li>
+                        <li><a href="contact.html">Liên hệ &amp; Formspree</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hạ tầng triển khai</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/whqnanh/my-portfolio" target="_blank">🐙 GitHub Repository (Source Code)</a></li>
+                        <li><a href="https://whqnanh.github.io/my-portfolio/" target="_blank">🚀 GitHub Pages Production</a></li>
+                        <li><a href="http://hoanganh-cv.42web.io" target="_blank">🌐 InfinityFree Web Server</a></li>
+                        <li><a href="mailto:nghoanganh559@gmail.com">📧 nghoanganh559@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Nguyễn Hoàng Anh. Bản quyền thuộc về sinh viên CNTT - Đại học Văn Hiến (VHU).</p>
             </div>
         </div>
-        <p style="margin-top: 1rem;">© 2026 Nguyễn Hoàng Anh. All rights reserved. Lập trình Web - VHU.</p>
     </footer>
 
+    <button type="button" class="back-to-top" title="Cuộn lên đầu trang" aria-label="Lên đầu trang">↑</button>
     <script src="js/script.js"></script>
 </body>
 </html>

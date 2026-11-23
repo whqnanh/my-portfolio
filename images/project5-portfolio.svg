@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#bg5)"/>
+  <g filter="url(#shadow5)">
+    <rect x="70" y="45" width="460" height="290" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <path d="M 70 57 A 12 12 0 0 1 82 45 L 518 45 A 12 12 0 0 1 530 57 L 530 85 L 70 85 Z" fill="#7c2d12"/>
+    <text x="100" y="70" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">☁️ Cloudflare DNS &amp; Multi-Platform Deploy</text>
+    
+    <!-- Cloud architecture illustration -->
+    <g transform="translate(100, 110)">
+      <!-- Domain box -->
+      <rect x="0" y="40" width="100" height="80" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="72" font-size="24" text-anchor="middle">🌐</text>
+      <text x="50" y="96" fill="#1e40af" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Custom Domain</text>
+      <text x="50" y="110" fill="#64748b" font-family="-apple-system, sans-serif" font-size="9" text-anchor="middle">DNS / SSL</text>
+
+      <!-- Arrow 1 -->
+      <path d="M 105 80 L 140 80" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="145,80 138,76 138,84" fill="#f97316"/>
+
+      <!-- Cloudflare Proxy Box -->
+      <rect x="150" y="25" width="115" height="110" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+      <text x="207" y="60" font-size="28" text-anchor="middle">🛡️</text>
+      <text x="207" y="85" fill="#c2410c" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Cloudflare</text>
+      <text x="207" y="102" fill="#ea580c" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Proxy &amp; DDoS</text>
+      <text x="207" y="118" fill="#16a34a" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">🔒 SSL Full (Strict)</text>
+
+      <!-- Arrow 2 -->
+      <path d="M 270 80 L 305 80" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="310,80 303,76 303,84" fill="#f97316"/>
+
+      <!-- Edge Platforms -->
+      <g transform="translate(315, 0)">
+        <rect x="0" y="10" width="85" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <text x="42" y="32" fill="#000000" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">▲ Vercel</text>
+
+        <rect x="0" y="55" width="85" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <text x="42" y="77" fill="#0e7490" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">💎 Netlify</text>
+
+        <rect x="0" y="100" width="85" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <text x="42" y="122" fill="#1f2937" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🐙 GitHub</text>
+      </g>
+    </g>
+
+    <!-- Bottom verification status -->
+    <rect x="100" y="275" width="400" height="35" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="300" y="297" fill="#065f46" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">✅ DNS Records: A (@) &amp; CNAME (www) • HTTPS Tự Động 100%</text>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#bg3)"/>
+  <g filter="url(#shadow3)">
+    <rect x="70" y="45" width="460" height="290" rx="12" fill="#ffffff" fill-opacity="0.95"/>
+    <!-- Store Header -->
+    <path d="M 70 57 A 12 12 0 0 1 82 45 L 518 45 A 12 12 0 0 1 530 57 L 530 85 L 70 85 Z" fill="#064e3b"/>
+    <text x="100" y="70" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">🛒 TechStore • E-Commerce Web</text>
+    <rect x="420" y="55" width="85" height="24" rx="12" fill="#10b981"/>
+    <text x="462" y="71" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Giỏ hàng (3)</text>
+    
+    <!-- 3 Product Cards -->
+    <!-- Prod 1 -->
+    <g transform="translate(95, 105)">
+      <rect x="0" y="0" width="125" height="195" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="12" y="12" width="101" height="85" rx="6" fill="#e0e7ff"/>
+      <text x="62" y="60" font-size="36" text-anchor="middle">💻</text>
+      <text x="12" y="118" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Laptop Pro M3</text>
+      <text x="12" y="138" fill="#059669" font-family="-apple-system, sans-serif" font-size="13" font-weight="800">28.990.000đ</text>
+      <rect x="12" y="155" width="101" height="26" rx="4" fill="#059669"/>
+      <text x="62" y="172" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">+ Mua ngay</text>
+    </g>
+
+    <!-- Prod 2 -->
+    <g transform="translate(237, 105)">
+      <rect x="0" y="0" width="125" height="195" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="12" y="12" width="101" height="85" rx="6" fill="#fee2e2"/>
+      <text x="62" y="60" font-size="36" text-anchor="middle">🎧</text>
+      <text x="12" y="118" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Tai nghe ANC</text>
+      <text x="12" y="138" fill="#059669" font-family="-apple-system, sans-serif" font-size="13" font-weight="800">4.490.000đ</text>
+      <rect x="12" y="155" width="101" height="26" rx="4" fill="#059669"/>
+      <text x="62" y="172" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">+ Mua ngay</text>
+    </g>
+
+    <!-- Prod 3 -->
+    <g transform="translate(380, 105)">
+      <rect x="0" y="0" width="125" height="195" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="12" y="12" width="101" height="85" rx="6" fill="#fef3c7"/>
+      <text x="62" y="60" font-size="36" text-anchor="middle">⌚</text>
+      <text x="12" y="118" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Smart Watch X</text>
+      <text x="12" y="138" fill="#059669" font-family="-apple-system, sans-serif" font-size="13" font-weight="800">6.290.000đ</text>
+      <rect x="12" y="155" width="101" height="26" rx="4" fill="#059669"/>
+      <text x="62" y="172" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">+ Mua ngay</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách dự án web nổi bật - Nguyễn Hoàng Anh. Thiết kế với CSS Grid, JavaScript ES6+ và Responsive Mobile First.">
+    <title>Dự án nổi bật (CSS Grid) - Nguyễn Hoàng Anh Portfolio</title>
+    
+    <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="images/avatar.jpg" alt="Avatar Nguyễn Hoàng Anh" class="brand-avatar">
+                <span>Hoàng Anh <span class="brand-badge">DEV</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Trang chủ</a></li>
+                <li><a href="about.html" class="nav-link">Giới thiệu</a></li>
+                <li><a href="projects.html" class="nav-link active">Dự án</a></li>
+                <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" title="Chuyển chế độ sáng / tối" aria-label="Đổi giao diện">
+                    🌙
+                </button>
+                <button type="button" class="mobile-toggle-btn" aria-label="Mở menu điều hướng" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link">🏠 Trang chủ</a></li>
+                <li><a href="about.html" class="mobile-nav-link">👤 Giới thiệu</a></li>
+                <li><a href="projects.html" class="mobile-nav-link active">💻 Dự án (6 dự án)</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">📬 Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container projects-section" style="padding-top: 3rem; padding-bottom: 5rem;">
+        <!-- Page Title Header -->
+        <div class="section-header reveal">
+            <span class="section-label">Kho lưu trữ dự án</span>
+            <h1 class="section-title">Danh sách 6 Dự án Tiêu biểu</h1>
+            <p class="section-description">
+                Được bố cục hoàn toàn bằng <strong>CSS Grid</strong> hiện đại, co giãn thông minh (Responsive Mobile-First) và tích hợp các công nghệ HTML5, CSS3, JavaScript ES6+ cùng các dịch vụ Cloud.
+            </p>
+        </div>
+
+        <!-- 6 Projects Grid (CSS Grid Core Requirement) -->
+        <div class="projects-grid">
+            <!-- Dự án 1: Todo List JS App -->
+            <article class="project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="images/project1-todo.svg" alt="Todo List JS App">
+                    <span class="project-badge-top">Dự án #1</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript ES6+</span>
+                        <span class="project-tag">LocalStorage</span>
+                        <span class="project-tag">CRUD</span>
+                    </div>
+                    <h2 class="project-title">1. Todo List JS App</h2>
+                    <p class="project-desc">
+                        Ứng dụng quản lý công việc toàn diện cho phép người dùng Thêm, Sửa, Đánh dấu hoàn thành và Xóa công việc. Toàn bộ trạng thái danh sách được tự động đồng bộ và lưu trữ bền vững vào LocalStorage của trình duyệt.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/my-portfolio" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Dự án 2: Weather Forecast App -->
+            <article class="project-card reveal reveal-delay-1">
+                <div class="project-img-wrapper">
+                    <img src="images/project2-weather.svg" alt="Weather Forecast App">
+                    <span class="project-badge-top">Dự án #2</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">OpenWeather API</span>
+                        <span class="project-tag">Async / Await</span>
+                        <span class="project-tag">REST API</span>
+                    </div>
+                    <h2 class="project-title">2. Weather Forecast App</h2>
+                    <p class="project-desc">
+                        Ứng dụng tra cứu thông tin thời tiết thời gian thực cho hơn 200.000 thành phố trên toàn cầu. Hiển thị nhiệt độ, độ ẩm, tốc độ gió, dự báo 3 ngày tiếp theo với giao diện tương thích hoàn hảo trên thiết bị di động.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/my-portfolio" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Dự án 3: TechStore E-Commerce (Bài tập 32) -->
+            <article class="project-card reveal reveal-delay-2">
+                <div class="project-img-wrapper">
+                    <img src="images/project3-ecommerce.svg" alt="TechStore E-Commerce">
+                    <span class="project-badge-top">Dự án #3</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">Shopping Cart</span>
+                        <span class="project-tag">Bài tập 32</span>
+                    </div>
+                    <h2 class="project-title">3. TechStore E-Commerce</h2>
+                    <p class="project-desc">
+                        Cửa hàng điện tử trực tuyến hiện đại với danh mục thiết bị công nghệ (Laptop, Tai nghe, Smartwatch). Hỗ trợ xem chi tiết sản phẩm, giỏ hàng động tính tổng chi phí tự động và form đặt mua hàng thuận tiện.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/bai-tap-32/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/bai-tap-32" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Dự án 4: Album Ảnh Nâng Cao (Bài tập 29) -->
+            <article class="project-card reveal">
+                <div class="project-img-wrapper">
+                    <img src="images/project4-gallery.svg" alt="Photo Gallery Pro">
+                    <span class="project-badge-top">Dự án #4</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Gallery Grid</span>
+                        <span class="project-tag">Modal Lightbox</span>
+                        <span class="project-tag">Bài tập 29</span>
+                    </div>
+                    <h2 class="project-title">4. Photo Gallery Pro</h2>
+                    <p class="project-desc">
+                        Bộ sưu tập album ảnh nghệ thuật nâng cao tích hợp bộ lọc danh mục theo chủ đề (Phong cảnh, Đô thị, Chân dung). Tính năng Modal Lightbox cho phép người dùng bấm phóng to ảnh chất lượng cao và chuyển ảnh mượt mà.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/album-anh/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/album-anh" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Dự án 5: Portfolio Đa Nền Tảng & Cloudflare -->
+            <article class="project-card reveal reveal-delay-1">
+                <div class="project-img-wrapper">
+                    <img src="images/project5-portfolio.svg" alt="Multi-Platform Cloud Deploy">
+                    <span class="project-badge-top">Dự án #5</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Cloudflare DNS</span>
+                        <span class="project-tag">GitHub Pages</span>
+                        <span class="project-tag">Chương 6</span>
+                    </div>
+                    <h2 class="project-title">5. Multi-Cloud Portfolio</h2>
+                    <p class="project-desc">
+                        Hệ thống xuất bản website đa nền tảng kết hợp GitHub Pages, InfinityFree và DuckDNS. Cấu hình bảo mật qua Cloudflare DNS Proxy, tự động kích hoạt chứng chỉ SSL/TLS Full (Strict) với tốc độ phân phối CDN toàn cầu.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/my-portfolio" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Dự án 6: Student Management System -->
+            <article class="project-card reveal reveal-delay-2">
+                <div class="project-img-wrapper">
+                    <img src="images/project6-student.svg" alt="Student Management Dashboard">
+                    <span class="project-badge-top">Dự án #6</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="project-tag">Admin Dashboard</span>
+                        <span class="project-tag">Data Table</span>
+                        <span class="project-tag">Filter &amp; Sort</span>
+                    </div>
+                    <h2 class="project-title">6. Student Management App</h2>
+                    <p class="project-desc">
+                        Hệ thống quản lý điểm và hồ sơ sinh viên với bảng dữ liệu tương tác, tính năng tìm kiếm theo tên/mã số sinh viên, sắp xếp điểm GPA và thẻ thống kê trực quan tỉ lệ học lực khá giỏi của cả lớp học phần.
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://whqnanh.github.io/my-portfolio/" target="_blank" class="project-btn demo">🚀 Demo Trực Tiếp</a>
+                        <a href="https://github.com/whqnanh/my-portfolio" target="_blank" class="project-btn code">🐙 GitHub Code</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Tech Stack Highlight -->
+        <div class="hosting-overview-card reveal" style="margin-top: 4rem;">
+            <div style="text-align: center;">
+                <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">
+                    💡 Kiến trúc CSS Grid được áp dụng trong trang này
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 750px; margin: 0 auto 1.25rem;">
+                    Sử dụng quy tắc chuẩn: <code>grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;</code> giúp 6 thẻ dự án tự động xếp 1 cột trên Mobile điện thoại, 2 cột trên Tablet và 3 cột đều đặn trên màn hình Desktop máy tính mà không làm vỡ giao diện!
+                </p>
+                <a href="contact.html" class="btn btn-primary">
+                    Trao đổi thêm về các dự án →
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 0.5rem;">
+                        <img src="images/avatar.jpg" alt="Avatar" style="width: 28px; height: 28px; border-radius: 50%;">
+                        Nguyễn Hoàng Anh Portfolio
+                    </h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+                        Học phần Lập trình Web - Khoa Công nghệ Thông tin, Đại học Văn Hiến (VHU).
+                    </p>
+                    <span class="cloudflare-verified-badge">
+                        🛡️ Cloudflare DNS &amp; SSL Full (Strict) Verified
+                    </span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Điều hướng</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu bản thân</a></li>
+                        <li><a href="projects.html">Dự án tiêu biểu (CSS Grid)</a></li>
+                        <li><a href="contact.html">Liên hệ &amp; Formspree</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hạ tầng triển khai</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/whqnanh/my-portfolio" target="_blank">🐙 GitHub Repository (Source Code)</a></li>
+                        <li><a href="https://whqnanh.github.io/my-portfolio/" target="_blank">🚀 GitHub Pages Production</a></li>
+                        <li><a href="http://hoanganh-cv.42web.io" target="_blank">🌐 InfinityFree Web Server</a></li>
+                        <li><a href="mailto:nghoanganh559@gmail.com">📧 nghoanganh559@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Nguyễn Hoàng Anh. Bản quyền thuộc về sinh viên CNTT - Đại học Văn Hiến (VHU).</p>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" class="back-to-top" title="Cuộn lên đầu trang" aria-label="Lên đầu trang">↑</button>
+    <script src="js/script.js"></script>
+</body>
+</html>
