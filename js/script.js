@@ -1,14 +1,3 @@
-/**
- * JAVASCRIPT NÂNG CAO - PORTFOLIO NGUYỄN HOÀNG ANH
- * Chương 6: Domain Name & Hosting - BÀI TẬP THỰC HÀNH SỐ 8
- * Các chức năng chính:
- * 1. Dark Mode Toggle với LocalStorage & System Preference Detection
- * 2. Scroll Animation sử dụng Intersection Observer API
- * 3. Mobile Navigation Menu Toggle
- * 4. Xử lý Formspree Contact Form qua AJAX/Fetch API
- * 5. Nút cuộn lên đầu trang (Back to Top)
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initScrollAnimation();
@@ -18,17 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightActiveNavLink();
 });
 
-/* ==========================================================================
-   1. DARK MODE TOGGLE (LocalStorage + System Preference)
-   ========================================================================== */
 function initThemeToggle() {
     const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
     if (!themeToggleBtns.length) return;
 
-    // Lấy theme đã lưu trong LocalStorage hoặc theo tùy chọn của hệ điều hành
     const savedTheme = localStorage.getItem('portfolio-theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
     const initialTheme = savedTheme ? savedTheme : (systemPrefersDark ? 'dark' : 'light');
     applyTheme(initialTheme);
 
@@ -41,7 +25,6 @@ function initThemeToggle() {
         });
     });
 
-    // Lắng nghe thay đổi theme từ hệ thống nếu người dùng chưa chọn thủ công
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('portfolio-theme')) {
             applyTheme(e.matches ? 'dark' : 'light');
@@ -52,54 +35,42 @@ function initThemeToggle() {
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    const sunSvg = '<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>';
+    const moonSvg = '<svg viewBox="0 0 24 24"><path d="M12.3 2a10 10 0 0 0-.19 2 10 10 0 0 0 10 10c.7 0 1.37-.07 2-.19A10 10 0 1 1 12.3 2z"/></svg>';
+
     themeToggleBtns.forEach(btn => {
         if (theme === 'dark') {
-            btn.innerHTML = '☀️';
-            btn.setAttribute('title', 'Chuyển sang Chế độ Sáng (Light Mode)');
-            btn.setAttribute('aria-label', 'Chuyển sang Chế độ Sáng');
+            btn.innerHTML = sunSvg;
+            btn.setAttribute('title', 'Chế độ sáng');
+            btn.setAttribute('aria-label', 'Chuyển sang chế độ sáng');
         } else {
-            btn.innerHTML = '🌙';
-            btn.setAttribute('title', 'Chuyển sang Chế độ Tối (Dark Mode)');
-            btn.setAttribute('aria-label', 'Chuyển sang Chế độ Tối');
+            btn.innerHTML = moonSvg;
+            btn.setAttribute('title', 'Chế độ tối');
+            btn.setAttribute('aria-label', 'Chuyển sang chế độ tối');
         }
     });
 }
 
-/* ==========================================================================
-   2. SCROLL ANIMATION (INTERSECTION OBSERVER API)
-   ========================================================================== */
 function initScrollAnimation() {
     const revealElements = document.querySelectorAll('.reveal');
     if (!revealElements.length) return;
 
-    // Kiểm tra trình duyệt có hỗ trợ IntersectionObserver không
     if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -40px 0px',
-            threshold: 0.15
-        };
-
         const observer = new IntersectionObserver((entries, observerInstance) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Khi đã kích hoạt hiệu ứng một lần, hủy theo dõi để tối ưu hiệu năng
                     observerInstance.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.15 });
 
         revealElements.forEach(el => observer.observe(el));
     } else {
-        // Fallback cho trình duyệt cũ không hỗ trợ IntersectionObserver
         revealElements.forEach(el => el.classList.add('active'));
     }
 }
 
-/* ==========================================================================
-   3. MOBILE MENU TOGGLE
-   ========================================================================== */
 function initMobileMenu() {
     const mobileToggleBtn = document.querySelector('.mobile-toggle-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -112,9 +83,7 @@ function initMobileMenu() {
         mobileToggleBtn.setAttribute('aria-expanded', isOpen);
     });
 
-    // Đóng menu khi người dùng bấm vào bất kỳ liên kết nào
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
+    mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('open');
             mobileToggleBtn.classList.remove('open');
@@ -123,9 +92,6 @@ function initMobileMenu() {
     });
 }
 
-/* ==========================================================================
-   4. XỬ LÝ FORMSPREE CONTACT FORM (AJAX / FETCH API)
-   ========================================================================== */
 function initContactForm() {
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('formStatus');
@@ -140,7 +106,7 @@ function initContactForm() {
 
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '⏳ Đang gửi tin nhắn...';
+            submitBtn.innerHTML = 'Đang gửi...';
         }
 
         const formData = new FormData(form);
@@ -157,20 +123,20 @@ function initContactForm() {
             if (response.ok) {
                 if (statusDiv) {
                     statusDiv.className = 'form-status success';
-                    statusDiv.innerHTML = '🎉 Cảm ơn bạn! Tin nhắn đã được gửi thành công đến Nguyễn Hoàng Anh. Mình sẽ phản hồi sớm nhất qua email!';
+                    statusDiv.innerHTML = 'Tin nhắn đã được gửi thành công. Cảm ơn bạn!';
                 }
                 form.reset();
             } else {
                 const data = await response.json();
                 if (statusDiv) {
                     statusDiv.className = 'form-status error';
-                    statusDiv.innerHTML = '⚠️ ' + (data.errors ? data.errors.map(err => err.message).join(', ') : 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau hoặc gửi email trực tiếp!');
+                    statusDiv.innerHTML = (data.errors ? data.errors.map(err => err.message).join(', ') : 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.');
                 }
             }
         } catch (error) {
             if (statusDiv) {
                 statusDiv.className = 'form-status error';
-                statusDiv.innerHTML = '⚠️ Không thể kết nối đến máy chủ gửi thư. Vui lòng kiểm tra lại kết nối mạng hoặc liên hệ qua email: nghoanganh559@gmail.com';
+                statusDiv.innerHTML = 'Không thể gửi tin nhắn. Vui lòng kiểm tra lại kết nối mạng hoặc gửi email trực tiếp.';
             }
         } finally {
             if (submitBtn) {
@@ -181,15 +147,12 @@ function initContactForm() {
     });
 }
 
-/* ==========================================================================
-   5. BACK TO TOP BUTTON
-   ========================================================================== */
 function initBackToTop() {
     const backToTopBtn = document.querySelector('.back-to-top');
     if (!backToTopBtn) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 350) {
+        if (window.scrollY > 300) {
             backToTopBtn.classList.add('visible');
         } else {
             backToTopBtn.classList.remove('visible');
@@ -204,9 +167,6 @@ function initBackToTop() {
     });
 }
 
-/* ==========================================================================
-   6. HIGHLIGHT ACTIVE NAVIGATION LINK
-   ========================================================================== */
 function highlightActiveNavLink() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');

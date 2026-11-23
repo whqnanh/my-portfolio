@@ -1,52 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
   <defs>
     <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="100%" stop-color="#06b6d4" />
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
     </linearGradient>
-    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
-    </filter>
   </defs>
-  <rect width="600" height="380" rx="16" fill="url(#bg1)"/>
-  <!-- App Window -->
-  <g filter="url(#shadow1)">
-    <rect x="70" y="45" width="460" height="290" rx="12" fill="#ffffff" fill-opacity="0.95"/>
-    <!-- Window Header -->
-    <path d="M 70 57 A 12 12 0 0 1 82 45 L 518 45 A 12 12 0 0 1 530 57 L 530 85 L 70 85 Z" fill="#1e293b"/>
-    <circle cx="95" cy="65" r="6" fill="#ef4444"/>
-    <circle cx="115" cy="65" r="6" fill="#f59e0b"/>
-    <circle cx="135" cy="65" r="6" fill="#10b981"/>
-    <text x="300" y="70" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Todo List App • LocalStorage</text>
-    
-    <!-- Input Box -->
-    <rect x="100" y="105" width="320" height="36" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
-    <text x="115" y="128" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13">Thêm công việc mới...</text>
-    <rect x="430" y="105" width="70" height="36" rx="6" fill="#4f46e5"/>
-    <text x="465" y="128" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">+ Thêm</text>
-    
-    <!-- Tasks -->
-    <!-- Task 1 Done -->
-    <rect x="100" y="155" width="400" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <circle cx="125" cy="176" r="10" fill="#10b981"/>
-    <path d="M 120 176 L 123 179 L 130 172" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <text x="150" y="181" fill="#64748b" font-family="-apple-system, sans-serif" font-size="14" text-decoration="line-through">Hoàn thành bài tập HTML5 &amp; CSS3</text>
-    <rect x="440" y="165" width="45" height="22" rx="4" fill="#dcfce7"/>
-    <text x="462" y="180" fill="#15803d" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">DONE</text>
+  <rect width="600" height="380" rx="12" fill="url(#bg1)"/>
+  <rect x="70" y="45" width="460" height="290" rx="10" fill="#ffffff"/>
+  <path d="M 70 55 A 10 10 0 0 1 80 45 L 520 45 A 10 10 0 0 1 530 55 L 530 85 L 70 85 Z" fill="#1e293b"/>
+  <circle cx="95" cy="65" r="5" fill="#ef4444"/>
+  <circle cx="112" cy="65" r="5" fill="#f59e0b"/>
+  <circle cx="129" cy="65" r="5" fill="#10b981"/>
+  <text x="300" y="70" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Todo List App - LocalStorage</text>
+  
+  <rect x="100" y="105" width="320" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="115" y="128" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="13">Nhập công việc cần làm...</text>
+  <rect x="430" y="105" width="70" height="36" rx="6" fill="#2563eb"/>
+  <text x="465" y="128" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Thêm</text>
+  
+  <rect x="100" y="155" width="400" height="42" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="125" cy="176" r="9" fill="#10b981"/>
+  <path d="M 120 176 L 123 179 L 130 172" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="148" y="181" fill="#64748b" font-family="-apple-system, sans-serif" font-size="13" text-decoration="line-through">Học cú pháp HTML5 và CSS3</text>
+  <rect x="440" y="165" width="48" height="22" rx="4" fill="#dcfce7"/>
+  <text x="464" y="180" fill="#15803d" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Đã xong</text>
 
-    <!-- Task 2 Pending -->
-    <rect x="100" y="207" width="400" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <circle cx="125" cy="228" r="10" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
-    <text x="150" y="233" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="14" font-weight="500">Deploy website lên Vercel &amp; Netlify</text>
-    <rect x="430" y="217" width="55" height="22" rx="4" fill="#fef3c7"/>
-    <text x="457" y="232" fill="#b45309" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">PENDING</text>
+  <rect x="100" y="207" width="400" height="42" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="125" cy="228" r="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="148" y="233" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="13" font-weight="500">Deploy website lên GitHub Pages</text>
+  <rect x="435" y="217" width="53" height="22" rx="4" fill="#fef3c7"/>
+  <text x="461" y="232" fill="#b45309" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Chờ xử lý</text>
 
-    <!-- Task 3 In progress -->
-    <rect x="100" y="259" width="400" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <circle cx="125" cy="280" r="10" fill="#3b82f6"/>
-    <path d="M 120 280 L 123 283 L 130 276" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <text x="150" y="285" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="14" font-weight="500">Cấu hình Cloudflare DNS &amp; SSL</text>
-    <rect x="420" y="269" width="65" height="22" rx="4" fill="#dbeafe"/>
-    <text x="452" y="284" fill="#1d4ed8" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">IN PROGRESS</text>
-  </g>
+  <rect x="100" y="259" width="400" height="42" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="125" cy="280" r="9" fill="#3b82f6"/>
+  <path d="M 120 280 L 123 283 L 130 276" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="148" y="285" fill="#1e293b" font-family="-apple-system, sans-serif" font-size="13" font-weight="500">Cấu hình bản ghi DNS và SSL</text>
+  <rect x="425" y="269" width="63" height="22" rx="4" fill="#dbeafe"/>
+  <text x="456" y="284" fill="#1d4ed8" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Đang làm</text>
 </svg>
