@@ -267,6 +267,22 @@ footer a {
     border-color: #6e5494;
 }
 
+.platform-badge.infinity:hover {
+    background: #2563eb;
+    border-color: #3b82f6;
+}
+
+.platform-badge.duck:hover {
+    background: #eab308;
+    border-color: #facc15;
+    color: #111 !important;
+}
+
+.platform-badge.store:hover {
+    background: #10b981;
+    border-color: #34d399;
+}
+
 .platform-badge.netlify:hover {
     background: #00ad9f;
     border-color: #00c7b7;
